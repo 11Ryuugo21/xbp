@@ -1,0 +1,51 @@
+
+
+name=input("名前を入力してください")
+
+
+print("あなたは神奈川大学に入学しました")
+ok = 0
+ng = 0
+
+print("あなたは神奈川大学に入学しました")
+a = input("XBPに入りますか？")
+b = input("先生の眼鏡が変わりました、どう思いますか")
+c = input("課題提出締め切りが１週間後ですが早めに提出しますか？")
+d = input("最終課題発表日に提出するか？")
+if a == "入る" or a=="うん" or a =="入ります":
+
+    print("好感度UP")
+    ok = ok + 1
+else:
+    print("好感度下がる")
+    ng = ng + 1
+
+if b == "めっちゃいいですね" or b == "いいですね" or b == "いい" or b == "悪くない":
+    print("好感度UP")
+    ok = ok + 1
+else:
+    print("好感度下がる")
+    ng = ng + 1
+if c == "する" or c == "うん" in c:
+    print("好感度UP")
+    ok = ok + 3
+
+else:
+    print("好感度下がる")
+    ng = ng + 3
+
+
+if d == "する" or d == "頑張る" or d == "終わってる":
+    print("好感度UP")
+    ok = ok + 5
+
+else:
+    print("好感度下がる")
+    ng = ng + 5
+
+
+if[ok>=4]:
+    print("おわりーーー あなた単位取得です。おめでとうございます！", ok, )
+
+else :[ng>=5]
+    print("残念ー！。単位取得ならず",ng, )

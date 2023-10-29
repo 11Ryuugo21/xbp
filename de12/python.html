@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>竜吾のサイト</title>
+    <!-- ⑤スタイルシートの設定をしよう --> <link rel="stylesheet" href="./css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+<h1><font color="green">pythonでゲームの製作</font></h1>
+<h1><strong>６班＜ゲームの詳細＞</strong></h1>
+<ul><li><font color="red">道用先生の好感度を上げて単位を取得しよう</font></li><li>3つの問題に正解して点数を稼ぎ単位取得を目指すゲームです</li></ul>
+
+
+
+
+
+
+
+<h1><strong><font color="red">＜ゲームのソース＞</font></strong></h1>
+<a href="../de12/python/python/work5.py" target="_blank">vsコード</a>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">ok=0</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">name=input("あなたのあ名前はなんていうの？")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print("あなた",name,"っていうのね！！よろしく、では早速単位取得をかけたゲームを始めます")</li>
+        <li style="background-color:#EFF;">print("問題を正解して単位取得を目指そう!!!!!!!!!")</li>
+        <li style="background-color:#EEF;">print("あなたは神奈川大学に入学しました")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print("あなたはどのプログラムを受講しますか？")</li>
+        <li style="background-color:#EFF;">print("1道用先生のXBPでしょ")</li>
+        <li style="background-color:#EEF;">print("2海外経験したいIBCかな")</li>
+        <li style="background-color:#EFF;">print("3マーケティングを主に学びたいマネプロにしよ")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">value = int(input("1〜3の数字を選択してください"))</li>
+        <li style="background-color:#EEF;">if value == 1:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("正解!!!道用先生からの好感度UP")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok+5</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("残念。道用先生の機嫌を損ねた。好感度DOWN")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok-3</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print("あなたはXBPに入りました")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print("道用先生が髪型を変えました。なんと声をかける？")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print("1なんかいいですね")</li>
+        <li style="background-color:#EEF;">print("2お似合いですね!")</li>
+        <li style="background-color:#EFF;">print("3禿げました？")</li>
+        <li style="background-color:#EEF;">print("4髪型かっこいいですね!!")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">value = int(input("1〜4の数字を選択してください。外したら単位は、、、（・∀・）ﾆﾔﾆﾔ"))</li>
+        <li style="background-color:#EFF;">if value == 4:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("おめでとう！正解だ、単位取得に一歩前進")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok+5</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("何てこと言ってんだ?ひどいよ?")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok-3</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print("個性的な友達の作品や絵を見たときのあなたの答えは？")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print("1なんかすごいね")</li>
+        <li style="background-color:#EFF;">print("2いいね!素晴らしい")</li>
+        <li style="background-color:#EEF;">print("3なんか変じゃない")</li>
+        <li style="background-color:#EFF;">print("4無言")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">value = int(input("1〜4の数字を選択してね"))</li>
+        <li style="background-color:#EEF;">if value == 2:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("正解相手を褒めちぎれたあなたは友達になれそう")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok+5</li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("まさか３とか４を選んでないよね.選んでしまったそこの君この授業に限らず相手を肯定することは互いの肯定感UPにつながるのじゃ")</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("よーく頭に叩き込むのじゃ")</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;ok=ok-5</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#eeeeff;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print(ok,"/15",)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">if ok&gt;=9:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("おめでとう!!見事道用先生の心をつかみました。単位取得です!!")</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("残念。伸びしろがあっていいですね")</li>
+        </ol></code>
+
+        <h1><strong><font color="red">＜反省点＞</font></strong></h1>
+        <ul><li>問題数が少なかった</li><li>選択の個数が問題によって前後してしまった</li><li>チャットを使ってヒントを得てもよかったと思った。</li></ul>
+
+    </body>
+
+</body>
+<title>ryuugoのサイト</title>
+</html>
