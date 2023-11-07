@@ -48,4 +48,21 @@ if[ok>=4]:
     print("おわりーーー あなた単位取得です。おめでとうございます！", ok, )
 
 else :[ng>=5]
-    print("残念ー！。単位取得ならず",ng, )
+
+
+    print("残念ー！。単位取得ならず",ng, )npm install -g translate-shell
+trans -b :en "日本語のテキスト"
+
+
+
+
+
+
+from mt_auto_minhon_mlt import Translator
+
+translator = (
+    client_id='9d10c4706d96301a86f80a7794f9b13e06540966d',
+    client_secret='634904c2a7859c48abf37bc85bec20cf',
+    user_name='hikari00000',
+)
+en_actual = translator.translate_text('いぬ', source_lang='japanese', target_lang='english')

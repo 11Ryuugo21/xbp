@@ -1,0 +1,71 @@
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>プログラミング</title>
+    <!-- ⑤スタイルシートの設定をしよう --><link rel="stylesheet" href="./css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <body style="background: #aae7ee;">
+    
+    <div>
+    <div style=" background: #6bb2bd; padding: 20px; border: 2px dashed rgb(0, 119, 128); box-shadow: 0 0 0 5px rgb(107, 166, 189); -moz-box-shadow: 0 0 0 5px #6bb7bd; -webkit-box-shadow: 0 0 0 5px #6bbda3; font-size: 100%;"><h1>pyhotnを使って自動化をしてみよう!!!! </h1></div>
+         <!-- ①↓に文字を書いてみよう -->
+         
+    </div>
+<div>
+    <h1>標準語を敬語に直し、敬語のまま多言語への翻訳をしてみよう！！！</h1>
+</div>
+<div>
+    <h2>制作の手順</h2>
+    <br>
+    必要なコード<br>
+    ・標準語を敬語に直すコード<br>
+    ・日本語から英訳できるコード<br>
+    
+    <br>
+    自動翻訳のコードは見つけられたのだが、敬語に変換するコードが見つからなかった。<br>
+    しかし、このサイト<a href="https://3keigo.com/">【３秒敬語】</a>を活かせば上手くいくかもと思ったが、<br>
+    このサイトの仕組みがわからない＆自動翻訳のコードがうまく作動しなかったため断念した。<br>
+    <br>
+    <h2>ソースコード</h2>
+    <pre><code>
+        from mt_auto_minhon_mlt import Translator
+
+        translator = Translator(
+            client_id='9d10c4706d96301a86f80a7794f9b13e06540966d',
+            client_secret='634904c2a7859c48abf37bc85bec20cf',
+            user_name='hikari00000',
+        )
+        en_actual = translator.translate_text('いぬ', source_lang='ja', target_lang='en')
+    </code></pre>
+    
+    <br>
+
+他にもこのようなgooleのtranslatorを使ってもできるか試してみましたが、機能しませんでした。<br> 
+pip install google-translate.py のpipをインストールして<br>
+次のようなコードをpython package indexからコピペしました。<br>
+<a href="https://translate.google.com/" target="_blank">google translateのサイトURL</a>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import asyncio</li>
+    <li style="background-color:#EEF;">from google_translate_py import AsyncTranslator</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">async def main():</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(await AsyncTranslator().translate("Hello World!!", "en", "ja"))</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">loop = asyncio.get_event_loop()</li>
+    <li style="background-color:#EEF;">loop.run_until_complete(main())</li>
+    </ol></code>
+    <br>
+    ＜なぜ動かなかったのか？＞<br>
+    google-translateのアプリ自体は動くのにそのアプリをpythonでどのように使えばいいかがわからなかったこと<br>
+    そもそもやり方があっているのかが分からない<br>
+
+
+    <h2>＜反省点＞</h2>
+
+    <ul><li>高難易度の技をしようとしたこと</li><li>身近な簡単なところからやるべきだった</li><li>そもそもコードをつなげる方法がわからなかった</li></ul>
+
+<title>ryuugoのサイト</title>
+</html>
