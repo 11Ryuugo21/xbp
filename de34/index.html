@@ -4,400 +4,56 @@
     <meta charset="UTF-8">
     <title>XBP_HPsample</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/動く背景.css">
+    <link rel="stylesheet" href="./css/フォント.css">
 </head>
 
 
 <body>
 
-    <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>動く星空</title>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* スクロールを無効にする */
-}
-
-.stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* コンテンツより背景が後ろに来るようにする */
-    background-color: #000;
-}
-
-.star {
-    position: absolute;
-    background-color: #fff;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    animation: animateStar linear infinite; /* 星のアニメーションの設定 */
-}
-
-@keyframes animateStar {
-    from {
-        transform: translateY(-100vh) rotateZ(0deg); /* 星の初期位置と角度 */
-        opacity: 1; /* 星の初期透明度 */
-    }
-    to {
-        transform: translateY(100vh) rotateZ(360deg); /* 星の最終位置と角度 */
-        opacity: 0; /* 星の最終透明度 */
-    }
-}
-
-/* 星の位置と透明度をランダムに設定 */
-.star:nth-child(1) { right: 5%; top: 10%; animation-duration: 10s; }
-.star:nth-child(2) { left: 25%; top: 20%; animation-duration: 15s; }
-.star:nth-child(3) { left: 45%; top: 30%; animation-duration: 20s; }
-.star:nth-child(4) { left: 65%; top: 40%; animation-duration: 25s; }
-.star:nth-child(5) { left: 95%; top: 50%; animation-duration: 90s; }
-.star:nth-child(6) { left: 56%; top: 10%; animation-duration: 80s; }
-.star:nth-child(7) { right: 255%; bottom: 20%; animation-duration: 75s; }
-.star:nth-child(8) { left: 454%; top: 30%; animation-duration: 20s; }
-.star:nth-child(9) { left: 653%; top: 40%; animation-duration: 25s; }
-.star:nth-child(10) { left: 857%; top: 50%; animation-duration: 30s; }
-.star:nth-child(11) { left: 57%; top: 10%; animation-duration: 180s; }
-.star:nth-child(12) { left: 275%; bottom: 20%; animation-duration: 15s; }
-.star:nth-child(13) { left: 49%; top: 30%; animation-duration: 280s; }
-.star:nth-child(14) { left: 65%; top: 40%; animation-duration: 25s; }
-.star:nth-child(15) { left: 85%; top: 50%; animation-duration: 390s; }
-.star:nth-child(16) { left: 5%; top: 10%; animation-duration: 160s; }
-.star:nth-child(17) { left: 25%; bottom: 20%; animation-duration: 15s; }
-.star:nth-child(18) { left: 45%; top: 30%; animation-duration: 20s; }
-.star:nth-child(19) { left: 65%; top: 40%; animation-duration: 25s; }
-.star:nth-child(20) { left: 85%; top: 50%; animation-duration: 3970s; }
-.star:nth-child(21) { left: 5%; top: 10%; animation-duration: 109s; }
-.star:nth-child(22) { left: 25%; top: 20%; animation-duration: 15s; }
-.star:nth-child(23) { left: 45%; top: 30%; animation-duration: 20s; }
-.star:nth-child(24) { left: 65%; top: 40%; animation-duration: 25s; }
-.star:nth-child(25) { left: 85%; top: 50%; animation-duration: 30s; }
-.star:nth-child(26) { left: 5%; top: 10%; animation-duration: 190s; }
-.star:nth-child(27) { left: 25%; top: 20%; animation-duration: 15s; }
-.star:nth-child(28) { left: 45%; top: 30%; animation-duration: 20s; }
-.star:nth-child(29) { left: 657%; top: 40%; animation-duration: 25s; }
-.star:nth-child(30) { left: 80%; top: 50%; animation-duration: 30s; }
-.star:nth-child(31) { left: 56%; top: 10%; animation-duration: 10s; }
-.star:nth-child(32) { left: 255%; top: 20%; animation-duration: 15s; }
-.star:nth-child(33) { left: 49%; top: 30%; animation-duration: 20s; }
-.star:nth-child(34) { left: 63%; top: 40%; animation-duration: 25s; }
-.star:nth-child(35) { left: 86%; top: 50%; animation-duration: 30s; }
-.star:nth-child(36) { left: 57%; top: 10%; animation-duration: 10s; }
-.star:nth-child(37) { left: 28%; top: 20%; animation-duration: 15s; }
-.star:nth-child(38) { left: 48%; top: 30%; animation-duration: 20s; }
-.star:nth-child(39) { left: 60%; top: 40%; animation-duration: 25s; }
-.star:nth-child(40) { left: 88%; top: 50%; animation-duration: 30s; }
-.star:nth-child(41) { left: 8%; top: 10%; animation-duration: 10s; }
-.star:nth-child(42) { left: 29%; top: 20%; animation-duration: 15s; }
-.star:nth-child(43) { left: 43%; top: 30%; animation-duration: 20s; }
-.star:nth-child(44) { left: 60%; top: 40%; animation-duration: 25s; }
-.star:nth-child(45) { left: 87%; top: 50%; animation-duration: 30s; }
-.star:nth-child(46) { left: 59%; top: 10%; animation-duration: 10s; }
-.star:nth-child(47) { left: 20%; top: 20%; animation-duration: 15s; }
-.star:nth-child(48) { left: 42%; top: 30%; animation-duration: 20s; }
-.star:nth-child(49) { left: 60%; top: 40%; animation-duration: 25s; }
-.star:nth-child(50) { left: 89%; top: 50%; animation-duration: 30s; }
-.star:nth-child(51) { left: 7%; top: 10%; animation-duration: 10s; }
-.star:nth-child(52) { left: 26%; top: 20%; animation-duration: 15s; }
-.star:nth-child(53) { left: 49%; top: 30%; animation-duration: 20s; }
-.star:nth-child(54) { left: 60%; top: 40%; animation-duration: 25s; }
-.star:nth-child(55) { left: 84%; top: 50%; animation-duration: 30s; }
-.star:nth-child(56) { left: 3%; top: 10%; animation-duration: 10s; }
-.star:nth-child(57) { left: 20%; top: 20%; animation-duration: 15s; }
-.star:nth-child(58) { left: 48%; top: 30%; animation-duration: 20s; }
-.star:nth-child(59) { left: 67%; top: 40%; animation-duration: 25s; }
-.star:nth-child(60) { left: 87%; top: 50%; animation-duration: 30s; }
-
-
-/* 他にも必要な数だけ星の位置を追加してください */
-</style>
-</head>
-<body>
-
-<div class="stars">
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div> 
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <!-- 必要な数だけ星を追加してください -->
+    <body style="background-color: rgb(137, 217, 239);"><p style="color: rgb(66, 161, 205);"></p></body>
+<body><h1>RYUGOホームページ</h1>
+    <h2>Using CSS and SVG Filters</h2>
+    <h3>By <a href="https://codepen.io/lbebber">Lucas Bebber</a></h3>
+    <h4>Version 1 - <a href="https://codepen.io/lbebber/pen/RNgBPP" target="_blank">Version 2</a> - <a href="https://codepen.io/lbebber/pen/pvwZJp" target="_blank">Version 3</a> - <a href="https://codepen.io/lbebber/pen/rawQKR" target="_blank">Version 4</a></h4>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <nav class="menu">
+      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+      <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+      </label>
+    
+      <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+      <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+      <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+      <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+      <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+    
+    </nav>
+    
+    <!-- filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="shadowed-goo">
+    
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feBlend in2="shadow" in="goo" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+ 
     <logotohome>
-        <a href="./index.html"><img src="./images/0_XBlogo.png" alt=""></a>
+   
         </logotohome>
         <h1>XBP</h1>
             <h2><font color="blue">演習ノート一覧</font></h2>
