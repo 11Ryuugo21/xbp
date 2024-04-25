@@ -43,6 +43,7 @@
 
 </body>
 </html>
+動くHTml
 
 
 <body style="background-color: rgb(137, 217, 239);"><p style="color: rgb(66, 161, 205);"></p></body>
@@ -85,3 +86,32 @@
           <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
           <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
           <feBlend in2="goo" in="SourceGraphic" result="mix" />
+
+IOT
+
+
+          // 定数の定義
+const int sensorPin = A0;  // 光センサーのアナログ入力ピン
+const int ledPin = 13;     // LEDの出力ピン
+const int threshold = 100; // 明るさの閾値
+
+void setup() {
+  pinMode(sensorPin, INPUT);  // 光センサーの入力モードを設定
+  pinMode(ledPin, OUTPUT);    // LEDの出力モードを設定
+  Serial.begin(9600);         // シリアル通信の開始
+}
+
+void loop() {
+  int sensorValue = analogRead(1);  // 光センサーからのアナログ値を取得
+  
+  Serial.print("Sensor Value: ");
+  Serial.println(sensorValue);  // シリアルモニタにアナログ値を表示
+  int interval=0;
+  if(threshold<100){interval=100;}else{interval=1000;}
+  if (sensorValue > threshold) {
+    digitalWrite(ledPin, LOW);  // 明るさが閾値を超えたらLEDを点灯
+  } else {
+    digitalWrite(ledPin, HIGH);   // 明るさが閾値以下であればLEDを消灯
+  }
+  
+  delay(2000);  // 0.1秒待つ
