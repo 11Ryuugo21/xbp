@@ -6,7 +6,6 @@
 
 logo img{
     border-radius: 50%;
-    border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover; /* 画像のトリミング */
@@ -21,9 +20,6 @@ logotohome img{
 
 
 
-
-
-
 /* ========== common ========== */
 html, body {
 	font-size: 16px;
@@ -33,13 +29,7 @@ html, body {
     margin-bottom: 40px;
 	background: #efefef;
 }
-h1{
-    text-indent: 0em;
-}
-h2{
-    margin-left: 1em;
-    margin-top: 1em;
-}
+
 h3{
     margin-left: 2em;
 }
@@ -54,5 +44,26 @@ span.blackback{
     text-indent: 3em;
     background: #393939;
     color: #efefef;
+
+}
+h2{ 
+    color: #000000;
+}
+h1 {
+    color: #364e96;
+    padding: 0.5em 0;
+    border-top: 3px solid #364e96;
+    border-bottom: 3px solid #364e96;
+}
+.container {
+    display: flex;
+    align-items: center;
 }
 
+.text {
+    margin-left: 10px; /* テキストと写真の間隔を調整 */
+}
+
+.underlined-text {
+    text-decoration: underline; 
+}
