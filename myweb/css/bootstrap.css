@@ -313,11 +313,29 @@ dd {
 blockquote {
   margin: 0 0 1rem;
 }
+#border {
+  border-bottom: 8px #dddddd solid;
+  padding: 20px;
+}
+#border-2 {
+  border-bottom: 2px #dddddd solid;
+  padding: 10px;
+}
+#side-border {
+  border-left: 2px #000 solid;
+}
+.album-body {
+  margin-top: 20px;
+  border-bottom: 2px #dddddd solid;
+
+}
 
 b,
 strong {
   font-weight: bolder;
 }
+
+
 
 small, .small {
   font-size: 0.875em;
